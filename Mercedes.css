@@ -13,7 +13,6 @@ nav {
     justify-content: space-between;
     background-color: white;
     border-bottom: 1px solid #dddddd;
-
 }
 
 nav h2 {
@@ -33,7 +32,7 @@ nav a:hover {
     color: #00d2be;
 }
 
-.hero{
+.hero {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     height: 650px;
@@ -55,11 +54,11 @@ nav a:hover {
 
 .car-box {
     background-color: #333333;
-    background-image: url("https://i.pinimg.com/736x/27/18/01/2718015dd34df4bcba54d2dc2a3abade.jpg")
+    background-image: url("https://i.pinimg.com/736x/27/18/01/2718015dd34df4bcba54d2dc2a3abade.jpg");
 }
 
 .race-box {
-    background-image: url("https://i.pinimg.com/1200x/5d/0c/c6/5d0cc6815a29a4d0edc4a8cb8e2e0ef5.jpg")
+    background-image: url("https://i.pinimg.com/1200x/5d/0c/c6/5d0cc6815a29a4d0edc4a8cb8e2e0ef5.jpg");
 }
 
 .content {
@@ -69,12 +68,12 @@ nav a:hover {
     width: 80%;
 }
 
-.content p{
+.content p {
     font-size: 14px;
     letter-spacing: 1px;
 }
 
-.content h1{
+.content h1 {
     font-size: 40px;
     margin: 10px 0 20px;
 }
@@ -96,49 +95,64 @@ nav a:hover {
     background-color: transparent;
     color: #00d2be;
 }
-.content a:hover {
-    background-color: white;
-}
 
 footer {
     text-align: center;
     padding: 5px;
     background-color: #353232;
     color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
 }
 
+.socials {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.social-link {
+    color: white;
+    display: inline-flex;
+    align-items: center;
+    transition: color 0.2s;
+}
+
+.social-link:hover {
+    color: #00d2be;
+}
+
+/* ==========================================
+   DRIVERS PAGE
+   ========================================== */
 
 .drivers-header {
     text-align: center;
     padding: 60px 20px 20px;
 }
 
-
-
-
-.driver-header p{
+.drivers-header p {
     font-size: 14px;
     letter-spacing: 1px;
     color: #00d2be;
     font-weight: bold;
     margin: 0;
-
 }
 
-.driver-header h1{
+.drivers-header h1 {
     font-size: 36px;
     margin: 10px 0 0;
-
 }
 
 .drivers-grid {
-    display: grid;
+    display: flex;
     flex-direction: column;
     gap: 30px;
     padding: 40px 60px 80px;
     max-width: 1000px;
     margin: 0 auto;
-
 }
 
 .driver-card {
@@ -185,7 +199,6 @@ footer {
     font-size: 13px;
     letter-spacing: 1px;
     margin: 0 0 15px;
-
 }
 
 .driver-bio {
@@ -199,11 +212,11 @@ footer {
     .drivers-grid {
         padding: 20px;
     }
- 
+
     .driver-card {
         flex-direction: column;
     }
- 
+
     .driver-photo {
         flex: 0 0 250px;
         width: 100%;
@@ -232,22 +245,17 @@ footer {
     letter-spacing: 0.5px;
 }
 
-
-.about-container {
-    max-width: 850px; 
-    margin: 0 auto;
-    padding: 0 20px 60px;
-}
-
-
-.stats-grid {
+/* Grid 4 statistik */
+.stats-section {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 15px;
-    margin-bottom: 30px;
+    max-width: 850px;
+    margin: 0 auto 30px;
+    padding: 0 20px;
 }
 
-.stat-card {
+.stat-box {
     background-color: #ffffff;
     padding: 20px 10px;
     text-align: center;
@@ -256,14 +264,14 @@ footer {
     border-top: 3px solid #00d2be;
 }
 
-.stat-card h2 {
+.stat-box h2 {
     font-size: 32px;
     margin: 0;
     color: #111111;
     font-weight: bold;
 }
 
-.stat-card p {
+.stat-box p {
     font-size: 11px;
     font-weight: bold;
     letter-spacing: 0.8px;
@@ -272,11 +280,14 @@ footer {
     text-transform: uppercase;
 }
 
-
-.about-grid {
+/* Dua card cerita berdampingan */
+.about-content {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Membagi 2 kolom agar seimbang */
+    grid-template-columns: 1fr 1fr;
     gap: 20px;
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 0 20px 60px;
 }
 
 .about-card {
@@ -295,7 +306,7 @@ footer {
     justify-content: flex-start;
 }
 
-.about-subtitle {
+.about-info .subtitle {
     color: #00d2be;
     font-weight: bold;
     font-size: 12px;
@@ -311,27 +322,24 @@ footer {
     line-height: 1.3;
 }
 
-.about-description {
+.about-info .description {
     font-size: 13.5px;
     line-height: 1.55;
     color: #444444;
     margin: 0;
 }
 
-
 @media (max-width: 768px) {
-    .about-container {
-        padding: 0 15px 40px;
-    }
-
-    .stats-grid {
+    .stats-section {
         grid-template-columns: repeat(2, 1fr);
         gap: 10px;
+        padding: 0 15px;
     }
 
-    .about-grid {
-        grid-template-columns: 1fr; /* Tumpuk 1 kolom di HP */
+    .about-content {
+        grid-template-columns: 1fr;
         gap: 15px;
+        padding: 0 15px 40px;
     }
 
     .about-header h1 {
