@@ -210,11 +210,7 @@ footer {
     }
 }
 
-/* ==========================================
-   ABOUT PAGE STYLES (COMPACT & BALANCED)
-   ========================================== */
 
-/* Header section */
 .about-header {
     text-align: center;
     padding: 50px 20px 20px;
@@ -236,14 +232,14 @@ footer {
     letter-spacing: 0.5px;
 }
 
-/* Container Utama Rapat & Simetris */
+
 .about-container {
-    max-width: 850px; /* Diperketat agar konten padat di tengah */
+    max-width: 850px; 
     margin: 0 auto;
     padding: 0 20px 60px;
 }
 
-/* Statistik Grid (4 Kolom Rapat) */
+
 .stats-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -276,7 +272,7 @@ footer {
     text-transform: uppercase;
 }
 
-/* Card Cerita / Victory Grid (Dua Kolom Sejajar) */
+
 .about-grid {
     display: grid;
     grid-template-columns: 1fr 1fr; /* Membagi 2 kolom agar seimbang */
@@ -322,7 +318,7 @@ footer {
     margin: 0;
 }
 
-/* Responsif Mobile */
+
 @media (max-width: 768px) {
     .about-container {
         padding: 0 15px 40px;
